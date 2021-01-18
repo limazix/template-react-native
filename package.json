@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "precommit": "git add --interactive",
+    "docs": "docnator src docs/summary.md js",
+    "precommit": "npm run docs && git add --interactive",
     "commit": "cz"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "babel-jest": "^25.1.0",
     "cz-conventional-changelog": "^3.3.0",
+    "docnator": "^0.3.3",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",

@@ -24,9 +24,13 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+/**
+ * @name App
+ * @description React Native application entry point
+ */
+const App = () => {
   return (
-    <>
+    <div>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
@@ -68,7 +72,7 @@ const App: () => React$Node = () => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </div>
   );
 };
 
