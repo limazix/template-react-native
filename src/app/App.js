@@ -4,10 +4,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Provider } from 'react-redux';
-
-import appStore from './app.store';
-import { HomeScreen } from '../screens';
+import screens from '../screens';
 
 /**
  * @memberof App
@@ -23,13 +20,11 @@ const Stack = createStackNavigator();
  */
 const App = () => {
     return (
-        <Provider store={appStore}>
-            <NavigationContainer>
-                <Stack.Navigator>
-                    <Stack.Screen name="Home" component={HomeScreen} />
-                </Stack.Navigator>
-            </NavigationContainer>
-        </Provider>
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={screens.HomeScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 };
 
