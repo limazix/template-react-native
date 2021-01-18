@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 /**
+ * @memberof Screens
  * @name HomeScreen
  * @description It implemets the Home Screen page
  */
