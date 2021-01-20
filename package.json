@@ -51,7 +51,15 @@
     "moduleNameMapper": {
       "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
-    "collectCoverageFrom": [ "./src/**/*.js", "!./src/**/index.js" ]
+    "collectCoverageFrom": [ "./src/**/*.js", "!./src/**/index.js" ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   },
   "config": {
     "commitizen": {
