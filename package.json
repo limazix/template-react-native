@@ -5,10 +5,12 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "web": "react-scripts start",
     "start": "react-native start",
     "test": "jest",
     "tdd": "jest --watchAll --coverage",
     "lint": "eslint .",
+    "reset:ios": "cd ios && rm -rf Pods && pod cache clean --all && pod install && cd ..",
     "docs": "docnator src docs/summary.md js",
     "precommit": "npm run docs && git add --interactive",
     "commit": "cz"
@@ -18,12 +20,14 @@
     "@react-navigation/native": "^5.9.0",
     "@react-navigation/stack": "^5.13.0",
     "@reduxjs/toolkit": "^1.5.0",
-    "react": "16.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^17.0.1",
     "react-native": "0.63.4",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.16.1",
+    "react-native-web": "^0.14.10",
     "react-redux": "^7.2.2"
   },
   "devDependencies": {
@@ -31,17 +35,15 @@
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
     "@testing-library/react-native": "^7.1.0",
-    "babel-jest": "^25.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "docnator": "^0.3.3",
-    "eslint": "^6.5.1",
-    "jest": "^25.1.0",
     "jest-transform-stub": "^2.0.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "react-scripts": "^4.0.1",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
-    "preset": "react-native",
+    "preset": "react-native-web",
     "setupFiles": [
       "./jest/setup.js"
     ],
@@ -51,7 +53,10 @@
     "moduleNameMapper": {
       "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
-    "collectCoverageFrom": [ "./src/**/*.js", "!./src/**/index.js" ],
+    "collectCoverageFrom": [
+      "./src/**/*.js",
+      "!./src/**/index.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 80,
@@ -65,5 +70,17 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

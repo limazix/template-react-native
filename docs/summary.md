@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [index.js](docs/api/index.js.md)
 * [App.js](docs/api/App.js.md)
 * [index.js](docs/api/index.js.md)
 * [app.slice.js](docs/api/app.slice.js.md)
