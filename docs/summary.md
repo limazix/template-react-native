@@ -2,7 +2,8 @@
 
 * [Introduction](README.md)
 * [App.js](docs/api/App.js.md)
-* [app.store.js](docs/api/app.store.js.md)
+* [index.js](docs/api/index.js.md)
+* [app.slice.js](docs/api/app.slice.js.md)
 * [index.js](docs/api/index.js.md)
 * [index.js](docs/api/index.js.md)
 * [HomeScreen.js](docs/api/HomeScreen.js.md)
