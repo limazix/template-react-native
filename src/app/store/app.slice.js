@@ -23,9 +23,10 @@ const appSlice = createSlice({
          * @name changeAppState
          * @description Reducer used to handle the app loading state change
          * @param {object} state
+         * @param {object} state.appState
          * @param {object} action
          * @param {object} action.payload
-         * @param {APP_STATE} action.payload
+         * @param {APP_STATE} action.payload.appState
          */
         changeAppState(state, action) {
             const { appState } = action.payload;

@@ -41,7 +41,8 @@ Reducer used to handle the app loading state change
 | Param | Type |
 | --- | --- |
 | state | <code>object</code> | 
+| state.appState | <code>object</code> | 
 | action | <code>object</code> | 
 | action.payload | <code>object</code> | 
-| action.payload | [<code>APP\_STATE</code>](#APP_STATE) | 
+| action.payload.appState | [<code>APP\_STATE</code>](#APP_STATE) | 
 
