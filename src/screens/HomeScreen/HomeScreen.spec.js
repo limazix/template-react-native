@@ -7,9 +7,8 @@ import React from 'react';
 
 import HomeScreen from './HomeScreen';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react-native';
 
-it('renders correctly', () => {
-    renderer.create(<HomeScreen />);
+it('renders correctly', async () => {
+    await render(<HomeScreen />);
 });
