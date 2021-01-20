@@ -1,11 +1,15 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
+import appSlice from './app.slice';
+
 /**
  * @memberof App
  * @name rootReducer
  * @description This is the final reducer, the combination of all reducers
  */
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+    appSlice,
+});
 
 /**
  * @memberof App
