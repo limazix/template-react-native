@@ -13,6 +13,20 @@ The API documentation will be automatically generated on deploy stage at master 
 
 ## Usage
 
+### Change Name
+
+```sh
+npx react-native-rename <new-name>
+npm install
+```
+
+For Mac environment
+
+```sh
+cd ios
+pod install
+```
+
 ### Tests
 
 Run tests only one time
