@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from '../HomeScreen';
+import { connect } from 'react-redux';
 
 /**
  * @memberof screens
@@ -27,4 +28,9 @@ const NavigationStack = () => {
     );
 };
 
-export default NavigationStack;
+const mapStateToProps = (state, ownProps) => {
+    const { appState } = state.app;
+    return { ...ownProps, appState };
+};
+
+export default connect(mapStateToProps, null)(NavigationStack);

@@ -7,8 +7,8 @@ import appSlice from './app.slice';
  * @name rootReducer
  * @description This is the final reducer, the combination of all reducers
  */
-const rootReducer = combineReducers({
-    appSlice,
+export const rootReducer = combineReducers({
+    app: appSlice,
 });
 
 /**
