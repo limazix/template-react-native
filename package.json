@@ -43,9 +43,9 @@
     "react-test-renderer": "16.13.1"
   },
   "jest": {
-    "preset": "react-native-web",
+    "preset": "react-native",
     "setupFiles": [
-      "./jest/setup.js"
+      "<rootDir>/jest/setup.js"
     ],
     "transform": {
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"

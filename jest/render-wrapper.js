@@ -1,4 +1,3 @@
-// test-utils.js
 import React from 'react';
 import { render as rtlRender } from '@testing-library/react-native';
 import { createStore } from 'redux';
